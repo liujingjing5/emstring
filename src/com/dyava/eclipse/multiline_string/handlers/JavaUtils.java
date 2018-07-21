@@ -40,6 +40,8 @@ public class JavaUtils {
 				}	
 			}else if(b=='\\'){
 				sb.append("\\\\");
+			}else if(b=='"'){
+				sb.append("\\\"");
 			}else{
 				sb.append(b);
 			}
@@ -90,6 +92,8 @@ public class JavaUtils {
 							fragment.append('\r');
 						}else if(bnext=='\\'){
 							fragment.append('\\');
+						}else if(bnext=='\"'){
+							fragment.append('\"');
 						}else{
 							throw new RuntimeException("Unhandled escape characters");
 						}
