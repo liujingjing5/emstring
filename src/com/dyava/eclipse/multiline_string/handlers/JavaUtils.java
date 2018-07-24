@@ -17,9 +17,7 @@ public class JavaUtils {
 		int len = str.length();
 		for(int i=0; i<len; i++){
 			char b = str.charAt(i);
-			if(b=='t'){
-				sb.append("\t");
-			}else if(b=='\n' || b=='\r'){
+			if(b=='\n' || b=='\r'){
 				if(b=='\n'){
 					sb.append("\\n");
 					sb.append("\"+\n").append(fillStr).append("\"");
